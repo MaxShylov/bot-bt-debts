@@ -20,7 +20,7 @@ module.exports = async (bot, msg) => {
 
   let textUsers = 'Пользователи: \n';
 
-  users.map(i => textUsers += `${i.name} - @${i.login}\n`);
+  users.map(i => textUsers += `${i.name} - ${i.login}\n`);
 
   return message(textUsers, 5);
 };

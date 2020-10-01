@@ -54,10 +54,6 @@ module.exports = async (bot, msg, type) => {
   if (type === 'del') {
     const dbts = fromDebts.debts;
 
-    console.log('dbts', dbts);
-    console.log('dbts[to]', dbts[to]);
-    console.log('sum', sum);
-
     if (!dbts || !dbts[to]) return message(`Вы ничего не должны @${to}.`);
     if (dbts && dbts[to] < Math.abs(sum)) return message(`Вы должны @${to} всего лишь ${dbts[to]} грн.`);
   }

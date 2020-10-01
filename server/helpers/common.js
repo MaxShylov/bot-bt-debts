@@ -21,9 +21,6 @@ const getDebt = async (bot, chatId, query) => {
 const messageWithRemove = (bot, chatId, text, time) => {
   const t = time * 1000 || 15000;
 
-  console.log('time', time);
-  console.log('t', t);
-
   bot
     .sendMessage(chatId, text, { parse_mode: 'HTML' })
     .then(message => setTimeout(() => bot.deleteMessage(chatId, message.message_id), t));

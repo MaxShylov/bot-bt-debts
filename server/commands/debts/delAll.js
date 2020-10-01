@@ -33,7 +33,6 @@ module.exports = async (bot, msg) => {
   const text = `${msg.from.first_name}, ты уверен, что всё отдал?`;
   const buttons = Array(5).fill({ text: 'Нет', callback_data: 'no' });
   const index = getRandom();
-  console.log('index', index);
   buttons[index] = { text: 'Да', callback_data: 'yes' };
 
   const options = {
